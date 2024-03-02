@@ -1,0 +1,86 @@
+#: import bg_colors app_files.templates.bg_colors
+#: import text_colors app_files.templates.text_colors
+
+<HomeScreen>:
+    md_bg_color:bg_colors["bg_two"]
+    MDGridLayout:
+        cols:1
+        padding:dp(7)
+        MDRelativeLayout:
+            size_hint_y:None
+            height:dp(50)
+            Lb:
+                text:"Welcome, [b]@Clean_Code[/b]"
+                pos_hint:{"center_y":.5}
+                text_color:text_colors["txt_two"]
+        Card:
+            size_hint_y:None
+            height:dp(200)
+            padding:dp(5)
+            orientation: 'vertical'
+            MDBoxLayout:
+                MDRelativeLayout:
+                    Lb:
+                        text:"[b]Your Progress"
+                        text_color:text_colors["txt_three"]
+                        font_size:sp(30)
+                        pos_hint:{"center_y":.5}
+                    Lb:
+                        text:"Your actual progress"
+                        text_color:text_colors["txt_three"]
+                MDRelativeLayout:
+                    size_hint_x:.3
+                    Image:
+                        source:"assets/rocket.png"
+            MDRelativeLayout:
+                size_hint:None,None
+                size:Window.width-dp(30),dp(20)
+                id:progress
+
+    MDScrollView:
+        size_hint_y:None
+        height:Window.height-dp(270)
+        MDGridLayout:
+            id:grid_task
+            size_hint_y:None
+            height:dp(940)
+            rows:5
+            cols:1
+            padding:dp(7)
+            spacing: dp(7)
+    MDRelativeLayout:
+        IBtn:
+            icon:"plus-thick"
+            md_bg_color:bg_colors["bg_one"]
+            icon_color:text_colors["txt_two"]
+            pos_hint:{"center_x":.5,"top":.06}
+
+
+<CreateTask>:
+    MDGridLayout:
+        cols:1
+        padding:dp(7)
+        MDBoxLayout:
+            size_hint_y:None
+            height:dp(50)
+            IBtn:
+                icon:"chevron-left"
+                md_bg_color:bg_colors["bg_one"]
+                icon_color:text_colors["txt_three"]
+        MDScrollView:
+            MDList:
+                spacing:dp(5)
+                TCard:
+                    height:dp(200)
+                TCard:
+                    height:dp(400)
+                TCard:
+                    height:dp(100)
+        MDRelativeLayout:
+            size_hint_y:None
+            height:dp(50)
+            ITBtn:
+                icon:"timer-plus-outline"
+                text:"Save task"
+                md_bg_color:bg_colors["bg_one"]
+                pos_hint:{"right":1}
