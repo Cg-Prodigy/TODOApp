@@ -6,6 +6,7 @@
 <TCard@Card>:
     size_hint_y:None
     padding:dp(5)
+    orientation: 'vertical'
 <Btn@MDFillRoundFlatButton>:
     md_bg_color:bg_colors["bg_one"]
 <IBtn@MDIconButton>:
@@ -13,10 +14,25 @@
 <ITBtn@MDFillRoundFlatIconButton>:
     theme_text_color:"Custom"
     theme_icon_color:"Custom"
+<CItBtn@ITBtn>:
+    md_bg_color:bg_colors["bg_two"]
+    icon_color:bg_colors["bg_one"]
+    text_color:bg_colors["bg_one"]
 <Lb@MDLabel>:
     markup:True
     adaptive_height:True
     theme_text_color:"Custom"
+
+<CTextField>:
+    text_color_focus:text_colors["txt_two"]
+    text_color_normal:bg_colors["bg_two"]
+    line_color_normal:bg_colors["bg_three"]
+    line_color_focus:text_colors["txt_two"]
+    hint_text_color_normal:text_colors["txt_three"]
+    hint_text_color_focus:text_colors["txt_two"]
+    error_color:text_colors["txt_four"]
+    font_size:sp(12)
+
 
 <TaskCard>:
     orientation: 'vertical'

@@ -8,7 +8,7 @@ from kivy.uix.screenmanager import ScreenManager
 from kivymd.uix.widget import MDWidget
 from kivymd.uix.screen import MDScreen
 from kivymd.uix.card import MDCard
-
+from kivymd.uix.textfield import MDTextField
 bg_colors={
     "bg_one":get_color_from_hex("#27374D"),
     "bg_two":get_color_from_hex("#DDE6ED"),
@@ -89,3 +89,6 @@ class TaskCard(MDCard):
                 circle=(Window.width-dp(40),self.c_progess.y,dp(13),0,random.randrange(10,360)),
                 width=dp(2)
             )
+
+class CTextField(MDTextField):
+    pass

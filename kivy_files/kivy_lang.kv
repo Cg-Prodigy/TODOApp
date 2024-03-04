@@ -72,10 +72,66 @@
                 spacing:dp(5)
                 TCard:
                     height:dp(200)
+                    Lb:
+                        text:"Title"
+                        text_color:bg_colors["bg_two"]
+                    CTextField:
+                    Lb:
+                        text:"Description"
+                        text_color:bg_colors["bg_two"]
+                    CTextField:
                 TCard:
-                    height:dp(400)
+                    height:dp(330)
+                    spacing:dp(15)
+                    Lb:
+                        text:"Date/Time Details"
+                        text_color:bg_colors["bg_two"]
+                    MDBoxLayout:
+                        size_hint_y:None
+                        height:dp(50)
+                        MDRelativeLayout:
+                            CItBtn:
+                                icon:"plus"
+                                text:"Start Date"
+                                pos_hint:{"center_y":.5}
+                        MDRelativeLayout:
+                            Lb:
+                                font_size:sp(12)
+                                text:"Today"
+                                pos_hint:{"center_y":.5}
+                                text_color:bg_colors["bg_two"]
+                            MDCheckbox: 
+                                size_hint:None,None
+                                size:dp(30),dp(30)
+                                pos_hint:{"right":1,"center_y":.5}
+                                checkbox_icon_normal:"checkbox-marked-circle-outline"
+                                checkbox_icon_down:"checkbox-marked-circle-outline"
+                    Lb:
+                        font_size:sp(12)
+                        text:"Start date"
+                        text_color:bg_colors["bg_two"]
+                    CItBtn: 
+                        icon:"plus"
+                        text:"Start Time"
+                    Lb:
+                        font_size:sp(12)
+                        text:"Start time"
+                        text_color:bg_colors["bg_two"]
+                    CItBtn:
+                        icon:"plus"
+                        text:"End time"
+                    Lb:
+                        font_size:sp(12)
+                        text:"End time"
+                        text_color:bg_colors["bg_two"]
                 TCard:
                     height:dp(100)
+                    orientation: 'horizontal'
+                    CItBtn:
+                        icon:"chevron-right"
+                        text:"Personal"
+                        pos_hint:{"center_y":.5}
+                
         MDRelativeLayout:
             size_hint_y:None
             height:dp(50)
